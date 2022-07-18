@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body{
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;/*cover preenche o espasso com a menor largura contrario do container q eh com a maior   */
+    background-attachment: fixed; /*attachment tem a ver com a rolagem de pagina e o posicionamento da imagem fixed fixa e scoll rola junto com a pagina. E inherit tbm poder hedar do pai*/
+}
+
+main{
+    height: 100vh;
+    position: relative;
+}
+/*colocar no meio*/
+section#telefone{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    /*para deixar no meio transforma menos metade pra cima e pra tra*/ 
+
+    transform: translate(-50%, -50%);
+    height: 627px;
+    width: 311px;
+    background: url('../imagens/frame-iphone.png') no-repeat;
+}
+
+iframe#tela{
+    position: relative;
+    top: 80px;
+    left: 22px;
+    height: 471px;
+    width: 267px;
+}
+
+/*
+O position fixed: irá fixar a posição do elemento na coordenada que você definir. A medida que a página é rolada, o elemento continua fixo na posição que você definiu e o conteúdo da página rola normalmente. Geralmente é usado para fixar elementos como cabeçalhos ou sidebars.
+
+O position relative: posiciona o elemento em relação a si mesmo. Ou seja, o ponto zero será o canto superior esquerdo, e ele começará a contar a partir dali. Todos os positions precisam de um ponto para iniciar o cálculo da coordenada para assim posicionar o elemento na tela. Ao contrário do que muitos acham, esse ponto não é o ponto central do elemento, o ponto base é o canto superior esquerdo do elemento. A partir deste canto, o browser irá calcular a coordenada que você definiu e irá posicionar o elemento no viewport.
+
+O Position Absolute: é um tanto diferente do Relative. Enquanto o elemento com Position Relative utiliza seu próprio canto para referenciar sua posição, o elemento com Position Absolute se utiliza do ponto superior esquerdo de outros elementos. Estes elementos são os parentes dele do elemento com position absolute. Mais especificamente o pai.
+
+O Position Static: é o valor padrão para todos os elementos de uma página - todos são inicializados como 'static'. Não há complicação aqui, simplesmente significa que o elemento vai seguir o fluxo da página normalmente. A única boa razão para atribuir explicitamente o valor 'position: static' de um elemento é forçar a remoção de um posicionamento previamente definido.
+*/
